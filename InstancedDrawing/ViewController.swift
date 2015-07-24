@@ -9,7 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var metalView: MetalView
+    /*
+    var renderer:
+    @property (nonatomic, strong) MBERenderer *renderer;
+    @property (nonatomic, strong) CADisplayLink *displayLink;
+    @property (nonatomic, assign) float angularVelocity;
+    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

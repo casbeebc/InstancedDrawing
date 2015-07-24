@@ -13,6 +13,22 @@
 		8BEEF3141B61B671007DACE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3131B61B671007DACE1 /* Images.xcassets */; };
 		8BEEF3171B61B671007DACE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3151B61B671007DACE1 /* LaunchScreen.xib */; };
 		8BEEF3231B61B672007DACE1 /* InstancedDrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF3221B61B672007DACE1 /* InstancedDrawingTests.swift */; };
+		8BEEF3371B61B8E5007DACE1 /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF32D1B61B8E5007DACE1 /* CREDITS */; };
+		8BEEF3381B61B8E5007DACE1 /* spot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF32E1B61B8E5007DACE1 /* spot.obj */; };
+		8BEEF3391B61B8E5007DACE1 /* spot.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF32F1B61B8E5007DACE1 /* spot.png */; };
+		8BEEF33A1B61B8E5007DACE1 /* spot_control_mesh.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3301B61B8E5007DACE1 /* spot_control_mesh.obj */; };
+		8BEEF33B1B61B8E5007DACE1 /* spot_quadrangulated.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3311B61B8E5007DACE1 /* spot_quadrangulated.obj */; };
+		8BEEF33C1B61B8E5007DACE1 /* spot_texture.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3321B61B8E5007DACE1 /* spot_texture.svg */; };
+		8BEEF33D1B61B8E5007DACE1 /* spot_triangulated.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3331B61B8E5007DACE1 /* spot_triangulated.obj */; };
+		8BEEF33E1B61B8E5007DACE1 /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3351B61B8E5007DACE1 /* CREDITS */; };
+		8BEEF33F1B61B8E5007DACE1 /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3361B61B8E5007DACE1 /* grass.png */; };
+		8BEEF3411B61B9CF007DACE1 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF3401B61B9CF007DACE1 /* MetalView.swift */; };
+		8BEEF3441B61D61C007DACE1 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF3431B61D61C007DACE1 /* Renderer.swift */; };
+		8BEEF3461B61D6B6007DACE1 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF3451B61D6B6007DACE1 /* Shaders.metal */; };
+		8BEEF3481B61DA77007DACE1 /* Cow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF3471B61DA77007DACE1 /* Cow.swift */; };
+		8BEEF34D1B61F982007DACE1 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF34C1B61F982007DACE1 /* Types.swift */; };
+		8BEEF34F1B61FA64007DACE1 /* MatrixUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF34E1B61FA64007DACE1 /* MatrixUtilities.swift */; };
+		8BEEF3511B61FEB8007DACE1 /* TextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF3501B61FEB8007DACE1 /* TextureLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +52,23 @@
 		8BEEF31C1B61B672007DACE1 /* InstancedDrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstancedDrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEEF3211B61B672007DACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEEF3221B61B672007DACE1 /* InstancedDrawingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancedDrawingTests.swift; sourceTree = "<group>"; };
+		8BEEF32D1B61B8E5007DACE1 /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		8BEEF32E1B61B8E5007DACE1 /* spot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot.obj; sourceTree = "<group>"; };
+		8BEEF32F1B61B8E5007DACE1 /* spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spot.png; sourceTree = "<group>"; };
+		8BEEF3301B61B8E5007DACE1 /* spot_control_mesh.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_control_mesh.obj; sourceTree = "<group>"; };
+		8BEEF3311B61B8E5007DACE1 /* spot_quadrangulated.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_quadrangulated.obj; sourceTree = "<group>"; };
+		8BEEF3321B61B8E5007DACE1 /* spot_texture.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = spot_texture.svg; sourceTree = "<group>"; };
+		8BEEF3331B61B8E5007DACE1 /* spot_triangulated.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_triangulated.obj; sourceTree = "<group>"; };
+		8BEEF3351B61B8E5007DACE1 /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		8BEEF3361B61B8E5007DACE1 /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		8BEEF3401B61B9CF007DACE1 /* MetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		8BEEF3431B61D61C007DACE1 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		8BEEF3451B61D6B6007DACE1 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		8BEEF3471B61DA77007DACE1 /* Cow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cow.swift; sourceTree = "<group>"; };
+		8BEEF34A1B61DD6E007DACE1 /* InstancedDrawing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstancedDrawing-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BEEF34C1B61F982007DACE1 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		8BEEF34E1B61FA64007DACE1 /* MatrixUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixUtilities.swift; sourceTree = "<group>"; };
+		8BEEF3501B61FEB8007DACE1 /* TextureLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +110,18 @@
 		8BEEF3091B61B671007DACE1 /* InstancedDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				8BEEF34B1B61F972007DACE1 /* Utilities */,
+				8BEEF3421B61B9DC007DACE1 /* User Interface */,
+				8BEEF32C1B61B8E5007DACE1 /* spot */,
+				8BEEF3341B61B8E5007DACE1 /* textures */,
 				8BEEF30C1B61B671007DACE1 /* AppDelegate.swift */,
-				8BEEF30E1B61B671007DACE1 /* ViewController.swift */,
 				8BEEF3101B61B671007DACE1 /* Main.storyboard */,
 				8BEEF3131B61B671007DACE1 /* Images.xcassets */,
 				8BEEF3151B61B671007DACE1 /* LaunchScreen.xib */,
 				8BEEF30A1B61B671007DACE1 /* Supporting Files */,
+				8BEEF3451B61D6B6007DACE1 /* Shaders.metal */,
+				8BEEF3471B61DA77007DACE1 /* Cow.swift */,
+				8BEEF34A1B61DD6E007DACE1 /* InstancedDrawing-Bridging-Header.h */,
 			);
 			path = InstancedDrawing;
 			sourceTree = "<group>";
@@ -110,6 +149,49 @@
 				8BEEF3211B61B672007DACE1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BEEF32C1B61B8E5007DACE1 /* spot */ = {
+			isa = PBXGroup;
+			children = (
+				8BEEF32D1B61B8E5007DACE1 /* CREDITS */,
+				8BEEF32E1B61B8E5007DACE1 /* spot.obj */,
+				8BEEF32F1B61B8E5007DACE1 /* spot.png */,
+				8BEEF3301B61B8E5007DACE1 /* spot_control_mesh.obj */,
+				8BEEF3311B61B8E5007DACE1 /* spot_quadrangulated.obj */,
+				8BEEF3321B61B8E5007DACE1 /* spot_texture.svg */,
+				8BEEF3331B61B8E5007DACE1 /* spot_triangulated.obj */,
+			);
+			path = spot;
+			sourceTree = "<group>";
+		};
+		8BEEF3341B61B8E5007DACE1 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				8BEEF3351B61B8E5007DACE1 /* CREDITS */,
+				8BEEF3361B61B8E5007DACE1 /* grass.png */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		8BEEF3421B61B9DC007DACE1 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8BEEF30E1B61B671007DACE1 /* ViewController.swift */,
+				8BEEF3401B61B9CF007DACE1 /* MetalView.swift */,
+				8BEEF3431B61D61C007DACE1 /* Renderer.swift */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		8BEEF34B1B61F972007DACE1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8BEEF34C1B61F982007DACE1 /* Types.swift */,
+				8BEEF34E1B61FA64007DACE1 /* MatrixUtilities.swift */,
+				8BEEF3501B61FEB8007DACE1 /* TextureLoader.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +274,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEEF33F1B61B8E5007DACE1 /* grass.png in Resources */,
 				8BEEF3121B61B671007DACE1 /* Main.storyboard in Resources */,
+				8BEEF33A1B61B8E5007DACE1 /* spot_control_mesh.obj in Resources */,
+				8BEEF3381B61B8E5007DACE1 /* spot.obj in Resources */,
+				8BEEF33D1B61B8E5007DACE1 /* spot_triangulated.obj in Resources */,
+				8BEEF3371B61B8E5007DACE1 /* CREDITS in Resources */,
 				8BEEF3171B61B671007DACE1 /* LaunchScreen.xib in Resources */,
+				8BEEF33E1B61B8E5007DACE1 /* CREDITS in Resources */,
 				8BEEF3141B61B671007DACE1 /* Images.xcassets in Resources */,
+				8BEEF3391B61B8E5007DACE1 /* spot.png in Resources */,
+				8BEEF33B1B61B8E5007DACE1 /* spot_quadrangulated.obj in Resources */,
+				8BEEF33C1B61B8E5007DACE1 /* spot_texture.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEEF3441B61D61C007DACE1 /* Renderer.swift in Sources */,
+				8BEEF34F1B61FA64007DACE1 /* MatrixUtilities.swift in Sources */,
+				8BEEF3481B61DA77007DACE1 /* Cow.swift in Sources */,
+				8BEEF3411B61B9CF007DACE1 /* MetalView.swift in Sources */,
+				8BEEF34D1B61F982007DACE1 /* Types.swift in Sources */,
+				8BEEF3511B61FEB8007DACE1 /* TextureLoader.swift in Sources */,
 				8BEEF30F1B61B671007DACE1 /* ViewController.swift in Sources */,
 				8BEEF30D1B61B671007DACE1 /* AppDelegate.swift in Sources */,
+				8BEEF3461B61D6B6007DACE1 /* Shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +443,7 @@
 				INFOPLIST_FILE = InstancedDrawing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstancedDrawing/InstancedDrawing-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -355,6 +454,7 @@
 				INFOPLIST_FILE = InstancedDrawing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstancedDrawing/InstancedDrawing-Bridging-Header.h";
 			};
 			name = Release;
 		};
