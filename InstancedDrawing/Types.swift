@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import simd
 
-typealias IndexType = uint16_t
+typealias IndexType = UInt16
 
 struct Uniforms {
     var viewProjectionMatrix : matrix_float4x4

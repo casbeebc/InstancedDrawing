@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B6FF0AE1B6309040007A65D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AD1B6309040007A65D /* Group.swift */; };
+		8B6FF0B01B6309120007A65D /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AF1B6309120007A65D /* Mesh.swift */; };
+		8B6FF0B21B63091A0007A65D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0B11B63091A0007A65D /* Model.swift */; };
 		8BEEF30D1B61B671007DACE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF30C1B61B671007DACE1 /* AppDelegate.swift */; };
 		8BEEF30F1B61B671007DACE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF30E1B61B671007DACE1 /* ViewController.swift */; };
 		8BEEF3121B61B671007DACE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3101B61B671007DACE1 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B6FF0AD1B6309040007A65D /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		8B6FF0AF1B6309120007A65D /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		8B6FF0B11B63091A0007A65D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8BEEF3071B61B671007DACE1 /* InstancedDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstancedDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEEF30B1B61B671007DACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEEF30C1B61B671007DACE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B6FF0AC1B6308E50007A65D /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8B6FF0AD1B6309040007A65D /* Group.swift */,
+				8B6FF0AF1B6309120007A65D /* Mesh.swift */,
+				8B6FF0B11B63091A0007A65D /* Model.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		8BEEF2FE1B61B671007DACE1 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +126,7 @@
 		8BEEF3091B61B671007DACE1 /* InstancedDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				8B6FF0AC1B6308E50007A65D /* Objects */,
 				8BEEF34B1B61F972007DACE1 /* Utilities */,
 				8BEEF3421B61B9DC007DACE1 /* User Interface */,
 				8BEEF32C1B61B8E5007DACE1 /* spot */,
@@ -238,6 +255,7 @@
 		8BEEF2FF1B61B671007DACE1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = DataMingle;
 				TargetAttributes = {
@@ -304,8 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEEF3441B61D61C007DACE1 /* Renderer.swift in Sources */,
+				8B6FF0B01B6309120007A65D /* Mesh.swift in Sources */,
 				8BEEF34F1B61FA64007DACE1 /* MatrixUtilities.swift in Sources */,
+				8B6FF0B21B63091A0007A65D /* Model.swift in Sources */,
 				8BEEF3481B61DA77007DACE1 /* Cow.swift in Sources */,
+				8B6FF0AE1B6309040007A65D /* Group.swift in Sources */,
 				8BEEF3411B61B9CF007DACE1 /* MetalView.swift in Sources */,
 				8BEEF34D1B61F982007DACE1 /* Types.swift in Sources */,
 				8BEEF3511B61FEB8007DACE1 /* TextureLoader.swift in Sources */,
@@ -511,6 +532,7 @@
 				8BEEF3281B61B672007DACE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEEF3291B61B672007DACE1 /* Build configuration list for PBXNativeTarget "InstancedDrawingTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +541,7 @@
 				8BEEF32B1B61B672007DACE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

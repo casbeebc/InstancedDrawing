@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import simd
 
 class Cow : NSObject {
-    var position: vector_float3
-    var targetHeading: Float
-    var heading: Float
+    
+    var position: vector_float3 = []
+    var targetHeading: Float = 0.0
+    var heading: Float = 0.0
+    
 }

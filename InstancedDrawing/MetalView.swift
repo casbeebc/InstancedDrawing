@@ -42,29 +42,25 @@ class MetalView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
-        let touches = touches as! Set<UITouch>
+    override func touchesBegan(touches: Set<UITouch>, withEvent: UIEvent?) {
         
         for touch:UITouch in touches {
             currentTouch = touch
         }
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
-        let touches = touches as! Set<UITouch>
+    override func touchesMoved(touches: Set<UITouch>, withEvent: UIEvent? ) {
         
         for touch:UITouch in touches {
             currentTouch = touch
         }
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent: UIEvent? ) {
         currentTouch = nil
     }
     
-    override func touchesCancelled(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent: UIEvent? ) {
         currentTouch = nil
     }
     

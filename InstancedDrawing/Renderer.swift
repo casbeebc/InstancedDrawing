@@ -10,5 +10,13 @@ import Foundation
 import QuartzCore.CAMetalLayer
 
 class Renderer : NSObject {
+    /*
+    var angularVelocity: Float
+    var velocity: Float
+    var frameDuration: Float
     
+    override init() {
+        
+    }
+    */
 }

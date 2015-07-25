@@ -6,5 +6,4 @@
 //  Copyright (c) 2015 DataMingle. All rights reserved.
 //
 
-#import <simd/simd.h>
-@import simd
+// #import <simd/simd.h>
