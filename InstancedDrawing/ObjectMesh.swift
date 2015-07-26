@@ -9,7 +9,7 @@
 import Foundation
 import Metal
 
-class Mesh : NSObject {
+class ObjectMesh : NSObject {
     
     var indexBuffer: MTLBuffer
     var vertexBuffer: MTLBuffer
