@@ -322,34 +322,4 @@ class Model : NSObject {
         groupIndices.append(groupIndex!)
 
     }
-    
-    /*
-    - (void)addVertexToCurrentGroup:(FaceVertex)fv
-    {
-    static const vector_float4 UP = { 0, 1, 0, 0 };
-    static const vector_float2 ZERO2 = { 0, 0 };
-    static const uint16_t INVALID_INDEX = 0xffff;
-    
-    uint16_t groupIndex;
-    auto it = vertexToGroupIndexMap.find(fv);
-    if (it != vertexToGroupIndexMap.end())
-    {
-    groupIndex = (*it).second;
-    }
-    else
-    {
-    MBEVertex vertex;
-    vertex.position = vertices[fv.vi];
-    vertex.normal = (fv.ni != INVALID_INDEX) ? normals[fv.ni] : UP;
-    vertex.texCoords = (fv.ti != INVALID_INDEX) ? texCoords[fv.ti] : ZERO2;
-    
-    groupVertices.push_back(vertex);
-    groupIndex = groupVertices.size() - 1;
-    vertexToGroupIndexMap[fv] = groupIndex;
-    }
-    
-    groupIndices.push_back(groupIndex);
-    }
-
-    */
 }
