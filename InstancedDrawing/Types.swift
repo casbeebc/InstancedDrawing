@@ -24,4 +24,10 @@ struct Vertex {
     var position : packed_float4
     var normal : packed_float4
     var texCoords : packed_float2
+    
+    init() {
+        position = []
+        normal = []
+        texCoords = []
+    }
 }
