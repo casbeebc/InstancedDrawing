@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B6FF0AE1B6309040007A65D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AD1B6309040007A65D /* Group.swift */; };
-		8B6FF0B01B6309120007A65D /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AF1B6309120007A65D /* Mesh.swift */; };
+		8B6FF0B01B6309120007A65D /* ObjectMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AF1B6309120007A65D /* ObjectMesh.swift */; };
 		8B6FF0B21B63091A0007A65D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0B11B63091A0007A65D /* Model.swift */; };
 		8BEEF30D1B61B671007DACE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF30C1B61B671007DACE1 /* AppDelegate.swift */; };
 		8BEEF30F1B61B671007DACE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF30E1B61B671007DACE1 /* ViewController.swift */; };
@@ -46,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		8B6FF0AD1B6309040007A65D /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		8B6FF0AF1B6309120007A65D /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		8B6FF0AF1B6309120007A65D /* ObjectMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMesh.swift; sourceTree = "<group>"; };
 		8B6FF0B11B63091A0007A65D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8BEEF3071B61B671007DACE1 /* InstancedDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstancedDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEEF30B1B61B671007DACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6FF0AD1B6309040007A65D /* Group.swift */,
-				8B6FF0AF1B6309120007A65D /* Mesh.swift */,
+				8B6FF0AF1B6309120007A65D /* ObjectMesh.swift */,
 				8B6FF0B11B63091A0007A65D /* Model.swift */,
 			);
 			name = Objects;
@@ -322,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEEF3441B61D61C007DACE1 /* Renderer.swift in Sources */,
-				8B6FF0B01B6309120007A65D /* Mesh.swift in Sources */,
+				8B6FF0B01B6309120007A65D /* ObjectMesh.swift in Sources */,
 				8BEEF34F1B61FA64007DACE1 /* MatrixUtilities.swift in Sources */,
 				8B6FF0B21B63091A0007A65D /* Model.swift in Sources */,
 				8BEEF3481B61DA77007DACE1 /* Cow.swift in Sources */,
