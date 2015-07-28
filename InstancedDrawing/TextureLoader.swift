@@ -15,7 +15,7 @@ import simd
 class TextureLoader : NSObject {
     
     func dataForImage (image: UIImage) -> UnsafeMutablePointer<Void> {
-        var imageRef : CGImage = image.CGImage!
+        let imageRef : CGImage = image.CGImage!
         
         let width : Int = CGImageGetWidth(imageRef)
         let height : Int = CGImageGetHeight(imageRef)
@@ -43,4 +43,24 @@ class TextureLoader : NSObject {
        
         return rawData
     }
+    
+    func texture2DWithImageNamed(imageName: String, device: MTLDevice) -> MTLTexture {
+        let image: UIImage = UIImage(imageLiteral: imageName)!
+        let imageSize: CGSize = CGSizeMake(image.size.width, image.size.height * image.scale)
+        
+        let bytesPerPixel: CGFloat = 4
+        let bytesPerRow: CGFloat = bytesPerPixel * imageSize.width
+        
+        let imageData: UnsafeMutablePointer<Void> = self.dataForImage(image)
+        
+        let textureDescriptor : MTLTextureDescriptor = MTLTextureDescriptor.texture2DDescriptorWithPixelFormat(MTLPixelFormat.RGBA8Unorm, width: Int(imageSize.width), height: Int(imageSize.height), mipmapped: false)
+        
+        let texture = device.newTextureWithDescriptor(textureDescriptor)
+        
+        let region : MTLRegion = MTLRegionMake2D(0, 0, Int(imageSize.width), Int(imageSize.height))
+        texture.replaceRegion(region, mipmapLevel: 0, withBytes: imageData, bytesPerRow: Int(bytesPerRow))
+        
+        return texture
+    }
+    
 }
