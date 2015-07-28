@@ -10,6 +10,8 @@
 		8B6FF0AE1B6309040007A65D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AD1B6309040007A65D /* Group.swift */; };
 		8B6FF0B01B6309120007A65D /* ObjectMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0AF1B6309120007A65D /* ObjectMesh.swift */; };
 		8B6FF0B21B63091A0007A65D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0B11B63091A0007A65D /* Model.swift */; };
+		8B6FF0B51B67BB070007A65D /* GeometryMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0B41B67BB070007A65D /* GeometryMesh.swift */; };
+		8B6FF0B71B67BE220007A65D /* TerrainMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FF0B61B67BE220007A65D /* TerrainMesh.swift */; };
 		8BEEF30D1B61B671007DACE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF30C1B61B671007DACE1 /* AppDelegate.swift */; };
 		8BEEF30F1B61B671007DACE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF30E1B61B671007DACE1 /* ViewController.swift */; };
 		8BEEF3121B61B671007DACE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF3101B61B671007DACE1 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		8B6FF0AD1B6309040007A65D /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		8B6FF0AF1B6309120007A65D /* ObjectMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMesh.swift; sourceTree = "<group>"; };
 		8B6FF0B11B63091A0007A65D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8B6FF0B41B67BB070007A65D /* GeometryMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryMesh.swift; sourceTree = "<group>"; };
+		8B6FF0B61B67BE220007A65D /* TerrainMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerrainMesh.swift; sourceTree = "<group>"; };
 		8BEEF3071B61B671007DACE1 /* InstancedDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstancedDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEEF30B1B61B671007DACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEEF30C1B61B671007DACE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		8B6FF0B31B67BA550007A65D /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				8B6FF0B41B67BB070007A65D /* GeometryMesh.swift */,
+				8B6FF0B61B67BE220007A65D /* TerrainMesh.swift */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
 		8BEEF2FE1B61B671007DACE1 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +139,7 @@
 		8BEEF3091B61B671007DACE1 /* InstancedDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				8B6FF0B31B67BA550007A65D /* Geometry */,
 				8B6FF0AC1B6308E50007A65D /* Objects */,
 				8BEEF34B1B61F972007DACE1 /* Utilities */,
 				8BEEF3421B61B9DC007DACE1 /* User Interface */,
@@ -325,6 +339,7 @@
 				8B6FF0B01B6309120007A65D /* ObjectMesh.swift in Sources */,
 				8BEEF34F1B61FA64007DACE1 /* MatrixUtilities.swift in Sources */,
 				8B6FF0B21B63091A0007A65D /* Model.swift in Sources */,
+				8B6FF0B51B67BB070007A65D /* GeometryMesh.swift in Sources */,
 				8BEEF3481B61DA77007DACE1 /* Cow.swift in Sources */,
 				8B6FF0AE1B6309040007A65D /* Group.swift in Sources */,
 				8BEEF3411B61B9CF007DACE1 /* MetalView.swift in Sources */,
@@ -332,6 +347,7 @@
 				8BEEF3511B61FEB8007DACE1 /* TextureLoader.swift in Sources */,
 				8BEEF30F1B61B671007DACE1 /* ViewController.swift in Sources */,
 				8BEEF30D1B61B671007DACE1 /* AppDelegate.swift in Sources */,
+				8B6FF0B71B67BE220007A65D /* TerrainMesh.swift in Sources */,
 				8BEEF3461B61D6B6007DACE1 /* Shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
