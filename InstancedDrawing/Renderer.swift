@@ -224,8 +224,8 @@ class Renderer : NSObject {
         
         var terrainUniforms: PerInstanceUniforms = PerInstanceUniforms()
         
-        terrainUniforms.modelMatrix = matrix_identity()
-        terrainUniforms.normalMatrix = matrix_upper_left3x3(terrainUniforms.modelMatrix!)
+        terrainUniforms.modelMatrix = MatrixUtilities.matrix_identity()
+        terrainUniforms.normalMatrix = MatrixUtilities.matrix_upper_left3x3(terrainUniforms.modelMatrix!)
 
         memcpy(self.terrainUniformBuffer!.contents(), &terrainUniforms, sizeof(PerInstanceUniforms));
     }
@@ -268,13 +268,13 @@ class Renderer : NSObject {
             cow.position = position;
             
             // build model matrix for cow
-            let rotation: matrix_float4x4 = matrix_rotation(Y, angle: -cow.heading);
-            let translation: matrix_float4x4 = matrix_translation(cow.position);
+            let rotation: matrix_float4x4 = MatrixUtilities.matrix_rotation(Y, angle: -cow.heading);
+            let translation: matrix_float4x4 = MatrixUtilities.matrix_translation(cow.position);
             
             // copy matrices into uniform buffers
             var uniforms: PerInstanceUniforms = PerInstanceUniforms()
             uniforms.modelMatrix = matrix_multiply(translation, rotation);
-            uniforms.normalMatrix = matrix_upper_left3x3(uniforms.modelMatrix!);
+            uniforms.normalMatrix = MatrixUtilities.matrix_upper_left3x3(uniforms.modelMatrix!);
             
             memcpy(self.cowUniformBuffer!.contents() + sizeof(PerInstanceUniforms) * i, &uniforms, sizeof(PerInstanceUniforms));
         }
@@ -282,12 +282,12 @@ class Renderer : NSObject {
     
     func updateSharedUniforms() {
         
-        let viewMatrix: matrix_float4x4 = matrix_multiply(matrix_rotation(Y, angle: self.cameraHeading),
-            matrix_translation(-self.cameraPosition))
+        let viewMatrix: matrix_float4x4 = matrix_multiply(MatrixUtilities.matrix_rotation(Y, angle: self.cameraHeading),
+            MatrixUtilities.matrix_translation(-self.cameraPosition))
         
         let aspect: Float = Float(self.layer!.drawableSize.width) / Float(self.layer!.drawableSize.height);
         let fov: Float = (aspect > 1) ? (Float(M_PI) / 4) : (Float(M_PI) / 3)
-        let projectionMatrix: matrix_float4x4 = matrix_perspective_projection(aspect, fovy: fov, near: 0.1, far: 100);
+        let projectionMatrix: matrix_float4x4 = MatrixUtilities.matrix_perspective_projection(aspect, fovy: fov, near: 0.1, far: 100);
         
         var uniforms: Uniforms = Uniforms()
         
