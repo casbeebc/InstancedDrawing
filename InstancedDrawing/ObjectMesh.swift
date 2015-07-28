@@ -18,24 +18,12 @@ class ObjectMesh : NSObject {
     init (group: Group, device: MTLDevice) {
         
         vertexBuffer = device.newBufferWithBytes(group.vertexData!.bytes, length: group.vertexData!.length, options: MTLResourceOptions.CPUCacheModeDefaultCache)
-        //vertexBuffer.setLabel("Vertices "+group.name)
+        vertexBuffer.label = "Vertices ("+group.name+")"
         
         indexBuffer = device.newBufferWithBytes(group.indexData!.bytes, length: group.indexData!.length, options: MTLResourceOptions.CPUCacheModeDefaultCache)
+        indexBuffer.label  = "Indices ("+group.name+")"
         
         groupName = group.name
-        
-        //vertexBuffer.setLabel("Vertices "+group.name)
-        /*
-            _vertexBuffer = [device newBufferWithBytes:[group.vertexData bytes]
-            length:[group.vertexData length]
-            options:MTLResourceOptionCPUCacheModeDefault];
-            [_vertexBuffer setLabel:[NSString stringWithFormat:@"Vertices (%@)", group.name]];
-
-            _indexBuffer = [device newBufferWithBytes:[group.indexData bytes]
-            length:[group.indexData length]
-            options:MTLResourceOptionCPUCacheModeDefault];
-            [_indexBuffer setLabel:[NSString stringWithFormat:@"Indices (%@)", group.name]];
-        */
     }
 
 }
