@@ -14,7 +14,7 @@ import simd
 
 class TextureLoader : NSObject {
     
-    func dataForImage (image: UIImage) -> UnsafeMutablePointer<Void> {
+    static func dataForImage (image: UIImage) -> UnsafeMutablePointer<Void> {
         let imageRef : CGImage = image.CGImage!
         
         let width : Int = CGImageGetWidth(imageRef)
@@ -44,7 +44,8 @@ class TextureLoader : NSObject {
         return rawData
     }
     
-    func texture2DWithImageNamed(imageName: String, device: MTLDevice) -> MTLTexture {
+    static func texture2DWithImageNamed(imageName: String, device: MTLDevice) -> MTLTexture {
+        
         let image: UIImage = UIImage(imageLiteral: imageName)!
         let imageSize: CGSize = CGSizeMake(image.size.width, image.size.height * image.scale)
         

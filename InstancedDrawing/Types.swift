@@ -12,12 +12,12 @@ import simd
 typealias IndexType = UInt16
 
 struct Uniforms {
-    var viewProjectionMatrix : matrix_float4x4
+    var viewProjectionMatrix : matrix_float4x4?
 }
 
 struct PerInstanceUniforms {
-    var modelMatrix : matrix_float4x4
-    var normalMatrix : matrix_float3x3
+    var modelMatrix : matrix_float4x4?
+    var normalMatrix : matrix_float3x3?
 }
 
 struct Vertex {
