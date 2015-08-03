@@ -8,6 +8,23 @@
 import Foundation
 import simd
 
+/*
+
+Example SIMD usage:
+
+import simd
+let vec1 = float4(1.0, 2.0, 3.0, 4.0)
+let length1 = length(vec1)
+let vec2 = float4(1.0, 1.0, -1.0, -1.0)
+let dotProduct = dot(vec1, vec2)
+let elementwiseMultiplication = vec1*vec2
+let matrix1 = float4x4([[0,1,1,1], [-1,2,0,3], [-3,0,-4,5],[-1,-1,2,2]])
+let matrix2 = float4x4(diagonal:[1,2,3,4])
+let matrix3 = matrix1 + matrix2
+let matrix4 = matrix3.transpose
+
+*/
+
 class MatrixUtilities : NSObject {
     
     override init() {
@@ -21,7 +38,7 @@ class MatrixUtilities : NSObject {
         let Z : vector_float4 = [0, 0, 1, 0]
         let W : vector_float4 = [0, 0, 0, 1]
         
-        let identity : matrix_float4x4  = matrix_from_columns(X, Y, Z, W)
+        let identity : matrix_float4x4  = matrix_float4x4(columns:(X, Y, Z, W))
         
         return identity;
     }
@@ -54,7 +71,7 @@ class MatrixUtilities : NSObject {
         W.z = 0.0;
         W.w = 1.0;
         
-        let mat : matrix_float4x4 = matrix_from_columns(X, Y, Z, W)
+        let mat : matrix_float4x4 = matrix_float4x4(columns:(X, Y, Z, W))
         
         return mat;
     }
@@ -65,7 +82,7 @@ class MatrixUtilities : NSObject {
         let Z : vector_float4 = [0, 0, 1, 0]
         let W : vector_float4 = [t.x, t.y, t.z, 1]
         
-        let mat : matrix_float4x4 = matrix_from_columns(X, Y, Z, W)
+        let mat : matrix_float4x4 = matrix_float4x4(columns:(X, Y, Z, W))
         
         return mat
     }
@@ -76,7 +93,7 @@ class MatrixUtilities : NSObject {
         let Z : vector_float4 = [  0,   0, s.z,  0]
         let W : vector_float4 = [  0,   0,   0,  1]
         
-        let mat : matrix_float4x4 = matrix_from_columns(X, Y, Z, W)
+        let mat : matrix_float4x4 = matrix_float4x4(columns:(X, Y, Z, W))
         
         return mat
     }
@@ -87,7 +104,7 @@ class MatrixUtilities : NSObject {
         let Z : vector_float4 = [0, 0, s, 0]
         let W : vector_float4 = [0, 0, 0, 1]
         
-        let mat : matrix_float4x4 = matrix_from_columns(X, Y, Z, W)
+        let mat : matrix_float4x4 = matrix_float4x4(columns:(X, Y, Z, W))
         
         return mat
     }
@@ -104,17 +121,18 @@ class MatrixUtilities : NSObject {
         let R : vector_float4 = [0, 0, zScale, -1]
         let S : vector_float4 = [0, 0, wScale, 0]
         
-        let mat : matrix_float4x4 = matrix_from_columns(P, Q, R, S)
+        let mat : matrix_float4x4 = matrix_float4x4(columns:(P, Q, R, S))
         
         return mat
     }
 
     static func matrix_upper_left3x3 (mat4x4: matrix_float4x4) -> matrix_float3x3 {
         
-        let mat3x3 : matrix_float3x3 = matrix_from_columns(
-            [mat4x4.columns.0.x, mat4x4.columns.0.y, mat4x4.columns.0.z],
-            [mat4x4.columns.1.x, mat4x4.columns.1.y, mat4x4.columns.1.z],
-            [mat4x4.columns.2.x, mat4x4.columns.2.y, mat4x4.columns.2.z])
+        let column1: vector_float3 = [mat4x4.columns.0.x, mat4x4.columns.0.y, mat4x4.columns.0.z]
+        let column2: vector_float3 = [mat4x4.columns.1.x, mat4x4.columns.1.y, mat4x4.columns.1.z]
+        let column3: vector_float3 = [mat4x4.columns.2.x, mat4x4.columns.2.y, mat4x4.columns.2.z]
+        
+        let mat3x3: matrix_float3x3 = matrix_float3x3(columns: (column1, column2, column3))
         
         return mat3x3
     }
