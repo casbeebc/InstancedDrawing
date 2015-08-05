@@ -255,7 +255,7 @@ class Model : NSObject {
             let p1: vector_float3 = [v1.position.x, v1.position.y, v1.position.z]
             let p2: vector_float3 = [v2.position.x, v2.position.y, v2.position.z]
             
-            let cross : vector_float3 = vector_cross((p1-p0), (p2-p0))
+            let cross : vector_float3 = MatrixUtilities.vector_cross((p1-p0), right: (p2-p0))
             let cross4 : vector_float4 = [cross.x, cross.y, cross.z, 0]
             
             v0.normal += cross4
@@ -264,7 +264,7 @@ class Model : NSObject {
         }
         
         for var i=0; i < groupVertices.count; ++i {
-            groupVertices[i].normal = vector_normalize(groupVertices[i].normal)
+            groupVertices[i].normal = MatrixUtilities.vector_normalize(groupVertices[i].normal)
         }
         
     }

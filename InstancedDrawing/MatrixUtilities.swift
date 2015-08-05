@@ -137,6 +137,45 @@ class MatrixUtilities : NSObject {
         return mat3x3
     }
     
+    // Added new Vector/Matrix math functions
+    
+    static func vector_normalize(var vector: vector_float4) -> vector_float4 {
+        
+        let m: Float = vector_magnitude(vector)
+        
+        if m > 0 {
+            let il: Float = 1.0 / m
+            
+            vector.x *= il
+            vector.y *= il
+            vector.z *= il
+            vector.w *= il
+        }
+        
+        return vector
+    }
+    
+    static func vector_magnitude(vector: vector_float4) -> Float {
+        return sqrtf( vector.x*vector.x + vector.y*vector.y + vector.z*vector.z + vector.w*vector.w)
+    }
+    
+    static func vector_cross(left: vector_float3, right: vector_float3) -> vector_float3 {
+            
+        let a: Float = (left.y * right.z) - (left.z * right.y)
+        let b: Float = (left.z * right.x) - (left.x * right.z)
+        let c: Float = (left.x * right.y) - (left.y * right.x)
+        
+        return [a, b, c]
+    }
+    
+    static func matrix_multiply(left: matrix_float4x4, right: matrix_float4x4) -> matrix_float4x4 {
+        let tmpLeft: float4x4 = float4x4(left)
+        let tmpRight: float4x4 = float4x4(right)
+        
+        let m: float4x4 = tmpLeft * tmpRight
+        
+        return m.cmatrix
+    }
 }
 
 

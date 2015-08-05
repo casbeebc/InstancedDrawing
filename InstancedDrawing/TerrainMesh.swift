@@ -166,9 +166,10 @@ class TerrainMesh : GeometryMesh {
                     let D: vector_float4 = self.vertices[(r + 1) * self.stride + c].position
                     let T: vector_float3 = [ R.x - L.x, (R.y - L.y) * yScale, 0 ]
                     let B: vector_float3 = [ 0, (D.y - U.y) * yScale, D.z - U.z ]
-                    let N: vector_float3 = vector_cross(B, T);
+                    let N: vector_float3 = MatrixUtilities.vector_cross(B, right: T);
                     var normal: vector_float4 = [ N.x, N.y, N.z, 0 ]
-                    normal = vector_normalize(normal);
+                    normal = MatrixUtilities.vector_normalize(normal);
+                    
                     self.vertices[r * self.stride + c].normal = normal;
                     
                 } else {

@@ -273,7 +273,7 @@ class Renderer : NSObject {
             
             // copy matrices into uniform buffers
             var uniforms: PerInstanceUniforms = PerInstanceUniforms()
-            uniforms.modelMatrix = matrix_multiply(translation, rotation);
+            uniforms.modelMatrix = MatrixUtilities.matrix_multiply(translation, right: rotation);
             uniforms.normalMatrix = MatrixUtilities.matrix_upper_left3x3(uniforms.modelMatrix!);
             
             memcpy(self.cowUniformBuffer!.contents() + sizeof(PerInstanceUniforms) * i, &uniforms, sizeof(PerInstanceUniforms));
@@ -282,8 +282,8 @@ class Renderer : NSObject {
     
     func updateSharedUniforms() {
         
-        let viewMatrix: matrix_float4x4 = matrix_multiply(MatrixUtilities.matrix_rotation(Y, angle: self.cameraHeading),
-            MatrixUtilities.matrix_translation(-self.cameraPosition))
+        let viewMatrix: matrix_float4x4 = MatrixUtilities.matrix_multiply(MatrixUtilities.matrix_rotation(Y, angle: self.cameraHeading),
+            right: MatrixUtilities.matrix_translation(-self.cameraPosition))
         
         let aspect: Float = Float(self.layer!.drawableSize.width) / Float(self.layer!.drawableSize.height);
         let fov: Float = (aspect > 1) ? (Float(M_PI) / 4) : (Float(M_PI) / 3)
@@ -291,7 +291,7 @@ class Renderer : NSObject {
         
         var uniforms: Uniforms = Uniforms()
         
-        uniforms.viewProjectionMatrix = matrix_multiply(projectionMatrix, viewMatrix);
+        uniforms.viewProjectionMatrix = MatrixUtilities.matrix_multiply(projectionMatrix, right: viewMatrix);
         memcpy(self.sharedUniformBuffer!.contents(), &uniforms, sizeof(Uniforms));
     }
     
