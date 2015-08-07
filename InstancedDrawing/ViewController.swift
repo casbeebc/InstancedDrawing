@@ -7,27 +7,38 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
-    var metalView: MetalView
-    /*
-    var renderer:
-    @property (nonatomic, strong) MBERenderer *renderer;
-    @property (nonatomic, strong) CADisplayLink *displayLink;
-    @property (nonatomic, assign) float angularVelocity;
-    */
+    var renderer: Renderer?
+    var displayLink: CADisplayLink?
+    var angularVelocity: Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        self.view = MetalView()
+        
+        //self.renderer = Renderer(self.metalView.metalLayer)
+        
+        //[[MBERenderer alloc] initWithLayer:self.metalView.metalLayer];
+        
+        //self.displayLink = CADisplayLink(targe, selector: <#T##Selector#>)
+        /*
+            [CADisplayLink displayLinkWithTarget:self
+            selector:@selector(displayLinkDidFire:)];
+        */
+        //[self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 

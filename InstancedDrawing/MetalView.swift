@@ -31,15 +31,16 @@ class MetalView: UIView {
 
         // Since drawable size is in pixels, we need to multiply by the scale to move from points to pixels
         
-        // NOTE: Swift doesn't allow you to multiple two CGFloats together
+        // NOTE: Swift doesn't allow you to multiply two CGFloats together
         let newWidth = Float(drawableSize.width) * Float(scale)
         let newHeight = Float(drawableSize.height) * Float(scale)
         
         self.metalLayer.drawableSize = CGSize(width: CGFloat(newWidth), height: CGFloat(newHeight));
     }
 
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        //fatalError("init(coder:) has not been implemented")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent: UIEvent?) {
